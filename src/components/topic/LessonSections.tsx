@@ -12,6 +12,7 @@ import type { CorpusChunk } from "@/data/corpus";
 import TableChart from "@/components/lesson/TableChart";
 import FormulaPlayground from "@/components/lesson/FormulaPlayground";
 import RelationshipPlay from "@/components/lesson/RelationshipPlay";
+import EquationBalance from "@/components/lesson/EquationBalance";
 import VisualPicker from "@/components/teacher/VisualPicker";
 import { dedupe, resolveVisuals, type Resolved, type VisualOverride } from "@/lib/visuals/resolve";
 import { pageOf } from "@/lib/lesson/page-of";
@@ -323,6 +324,12 @@ function Section({
           which a syllabus does far more often. Same terms: read from the
           text, no subject knowledge, nothing when there is nothing. */}
       <RelationshipPlay text={body} />
+
+      {/* And an equation it asks the student to solve. Same terms again: read
+          from the text, no subject knowledge, nothing when there is nothing.
+          Measured at eight of the algebra deck's twenty-one sections and none
+          of the physics decks' fifty-four. */}
+      <EquationBalance text={body} />
 
       {visual.visual && <ConceptVisual kind={visual.visual as VisualKind} />}
 
