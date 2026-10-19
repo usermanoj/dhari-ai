@@ -1,4 +1,4 @@
--- Dhari AI — staff role allowlist (Phase 2)
+-- Lectern — staff role allowlist (Phase 2)
 --
 -- Apply AFTER 0001–0004. Replaces the "every teacher is promoted by hand in
 -- SQL" step: a pre-approved staff email is assigned its role automatically

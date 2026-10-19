@@ -1,4 +1,4 @@
--- Dhari AI — learning analytics
+-- Lectern — learning analytics
 --
 -- Apply AFTER 0001–0017.
 --

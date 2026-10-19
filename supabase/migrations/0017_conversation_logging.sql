@@ -1,4 +1,4 @@
--- Dhari AI — make conversation logging possible, and disposable
+-- Lectern — make conversation logging possible, and disposable
 --
 -- Apply AFTER 0001–0016.
 --

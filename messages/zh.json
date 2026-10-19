@@ -2,7 +2,7 @@
   "HomePage": {
     "badge": "✦ 引用可溯源。仅限校本课程内容。专为ESL课堂打造。",
     "headline": "唯一真相：<material>老师的教材</material>，用<language>每位学生的母语</language>讲给你听。",
-    "subtitle": "<brand>Dhari AI</brand> 仅根据学校审核过的教材作答——绝不使用互联网内容，每次回答都注明出处——并用学生自己的母语交流，目前已支持<highlight>简体中文</highlight>。",
+    "subtitle": "<brand>Lectern</brand> 仅根据学校审核过的教材作答——绝不使用互联网内容，每次回答都注明出处——并用学生自己的母语交流，目前已支持<highlight>简体中文</highlight>。",
     "ctaStudent": "登录 →",
     "ctaDemo": "试用物理演示",
     "languages": {
@@ -57,7 +57,7 @@
         "body": "数字类答案由确定性规则评分——绝不由AI随意猜测。"
       }
     },
-    "footer": "为 Claude Code 黑客松打造 · 七年级物理演示课程内容 · © Dhari AI",
+    "footer": "Lectern — 由 Dhari AI 打造",
     "rolesNote": "您无需选择身份——学校账户会自动识别，登录后直接进入对应页面。"
   },
   "LocaleSwitcher": {

@@ -1,4 +1,4 @@
--- Dhari AI — keep the data tables that came with the deck
+-- Lectern — keep the data tables that came with the deck
 --
 -- Apply AFTER 0001–0012.
 --

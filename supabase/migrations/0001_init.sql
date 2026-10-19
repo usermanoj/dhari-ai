@@ -1,4 +1,4 @@
--- Dhari AI — initial schema (Phase 1)
+-- Lectern — initial schema (Phase 1)
 --
 -- Implements the sketch data model from ROADMAP.md §2, plus one addition:
 -- class_enrollments (a student <-> class roster), which the sketch omitted

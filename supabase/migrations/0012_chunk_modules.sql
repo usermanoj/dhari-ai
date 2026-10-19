@@ -1,4 +1,4 @@
--- Dhari AI — group a lesson into modules
+-- Lectern — group a lesson into modules
 --
 -- Apply AFTER 0001–0011.
 --
