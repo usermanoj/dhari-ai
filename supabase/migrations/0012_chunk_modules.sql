@@ -1,4 +1,4 @@
--- Verity AI — group a lesson into modules
+-- Dhari AI — group a lesson into modules
 --
 -- Apply AFTER 0001–0011.
 --

@@ -1,4 +1,4 @@
--- Verity AI — document versions and duplicate-name resolution
+-- Dhari AI — document versions and duplicate-name resolution
 --
 -- Apply AFTER 0001–0007.
 --

@@ -2,7 +2,7 @@
   "HomePage": {
     "badge": "✦ Cited. Curriculum-only. Built for ESL classrooms.",
     "headline": "One truth: <material>your teacher's material</material>, in <language>every student's language</language>.",
-    "subtitle": "<brand>Verity AI</brand> answers only from your school's approved material — never the open internet, cited every time — and speaks in a student's own language, starting with <highlight>Chinese (Mandarin, Simplified)</highlight>.",
+    "subtitle": "<brand>Dhari AI</brand> answers only from your school's approved material — never the open internet, cited every time — and speaks in a student's own language, starting with <highlight>Chinese (Mandarin, Simplified)</highlight>.",
     "ctaStudent": "Sign in →",
     "ctaDemo": "Try the Physics demo",
     "languages": {
@@ -57,7 +57,7 @@
         "body": "Numbers graded deterministically — never by a guessing chatbot."
       }
     },
-    "footer": "Built for the Claude Code Hackathon · Grade 7 Physics demo corpus · © Verity AI",
+    "footer": "Built for the Claude Code Hackathon · Grade 7 Physics demo corpus · © Dhari AI",
     "rolesNote": "You don't pick a role — your school account decides it, and you land in the right place."
   },
   "LocaleSwitcher": {

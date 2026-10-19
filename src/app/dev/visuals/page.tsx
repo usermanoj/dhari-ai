@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import FormulaPlayground from "@/components/lesson/FormulaPlayground";
 import RelationshipPlay from "@/components/lesson/RelationshipPlay";
+import EquationBalance from "@/components/lesson/EquationBalance";
 import ConceptVisual from "@/components/topic/visuals/ConceptVisual";
 import TableChart from "@/components/lesson/TableChart";
 import { VISUALS } from "@/lib/visuals/catalogue";
@@ -75,6 +76,11 @@ export default function DevVisuals() {
       </Panel>
 
       <Panel title="Table becomes a graph">
+        {/* Verbatim from the Grade 7 algebra deck. */}
+        <EquationBalance text="To solve 3x + 2 = 17, subtract 2 from both sides." />
+        <EquationBalance text="Let n = number of notebooks. 4n + 3 = 23." />
+        <EquationBalance text="To solve x + 4 = 11, subtract 4 from both sides." />
+
         <TableChart table={REAL.table} />
       </Panel>
 

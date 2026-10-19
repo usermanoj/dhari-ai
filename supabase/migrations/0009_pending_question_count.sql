@@ -1,4 +1,4 @@
--- Verity AI — surface questions waiting for teacher approval
+-- Dhari AI — surface questions waiting for teacher approval
 --
 -- Apply AFTER 0001–0008.
 --

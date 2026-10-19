@@ -20,7 +20,7 @@
  * created and nothing else:
  *
  *   - teachers and students are named "Demo · <name>"
- *   - their emails are @demo.verity.invalid, a reserved TLD that can never
+ *   - their emails are @demo.dhari.invalid, a reserved TLD that can never
  *     receive mail or collide with a real school account
  *   - documents are named "Demo — <topic>.pptx"
  *
@@ -48,7 +48,7 @@ if (!url || !key) {
 const db = createClient(url, key, { auth: { persistSession: false } });
 
 const MARK = "Demo · ";
-const EMAIL_DOMAIN = "demo.verity.invalid";
+const EMAIL_DOMAIN = "demo.dhari.invalid";
 const DOC_PREFIX = "Demo — ";
 const YEAR = "2025-2026";
 

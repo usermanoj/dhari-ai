@@ -1,4 +1,4 @@
-# 2-minute demo script — Verity AI (Curriculum AI for English as a Second Language classrooms)
+# 2-minute demo script — Dhari AI (Curriculum AI for English as a Second Language classrooms)
 
 **One-liner:** *"An AI learning assistant for students learning in English as a Second Language (ESL) that can only answer from the teacher's own approved materials — cited every time — and is built to guide, not to hand over answers."*
 

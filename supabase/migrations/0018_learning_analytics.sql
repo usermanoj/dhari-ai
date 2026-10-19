@@ -1,4 +1,4 @@
--- Verity AI — learning analytics
+-- Dhari AI — learning analytics
 --
 -- Apply AFTER 0001–0017.
 --

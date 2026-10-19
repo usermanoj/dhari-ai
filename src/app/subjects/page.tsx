@@ -5,16 +5,10 @@ import { canSee, visibleDocuments } from "@/lib/access";
 import JoinClass from "@/components/classes/JoinClass";
 import SessionBadge from "@/components/SessionBadge";
 import { TOPICS as DEMO_TOPICS } from "@/data/corpus";
+import { subjectTiles } from "@/lib/subjects/tiles";
 
 // Reads whatever teachers have actually approved, so it can't be prerendered.
 export const dynamic = "force-dynamic";
-
-const SUBJECTS = [
-  { id: "physics", name: "Physics", icon: "🧲", color: "#22d3ee", topics: 2, ready: true, blurb: "Moments of a Force · Distance–Time Graphs" },
-  { id: "math", name: "Mathematics", icon: "📐", color: "#6366f1", topics: 0, ready: false, blurb: "Algebra · Geometry · Data" },
-  { id: "science", name: "Science", icon: "🔬", color: "#34d399", topics: 0, ready: false, blurb: "Biology · Chemistry · Energy" },
-  { id: "english", name: "English", icon: "📖", color: "#f472b6", topics: 0, ready: false, blurb: "Reading · Grammar · Essays" },
-];
 
 // When the teacher added a lesson. Relative, because "3 days ago" is what a
 // student can act on; the exact date is in the title attribute for anyone who
@@ -56,6 +50,15 @@ export default async function Subjects() {
 
   const added = await addedLabels(uploaded);
 
+  // Every topic this student may open, demo ones included — those are real
+  // Physics lessons with hand-built pages, and leaving them out would make the
+  // Physics tile disagree with the lesson the student just came from.
+  const tiles = subjectTiles(
+    Object.values(allTopics)
+      .filter((t) => canSee(visibility, t.id))
+      .sort((a, b) => (b.addedAt ?? "").localeCompare(a.addedAt ?? "")),
+  );
+
   // A student in no classes can see nothing, so the page has to offer the way
   // in rather than simply being empty. Staff are unrestricted viewers and
   // never need a code.
@@ -81,27 +84,31 @@ export default async function Subjects() {
       <h1 className="text-3xl font-bold tracking-tight">Good afternoon 👋</h1>
       <p className="mt-1 text-[var(--muted)]">Pick a subject to continue learning. Your AI learning assistant is ready.</p>
 
-      <section className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-        {SUBJECTS.map((s) => {
-          const card = (
-            <div
-              className={`glass group h-full rounded-3xl p-5 transition ${s.ready ? "cursor-pointer hover:-translate-y-1 hover:border-[var(--brand)]" : "opacity-60"}`}
-            >
-              <div className="mb-3 grid h-12 w-12 place-items-center rounded-2xl text-2xl" style={{ background: `${s.color}22` }}>{s.icon}</div>
-              <div className="font-semibold">{s.name}</div>
-              <div className="mt-0.5 text-xs text-[var(--muted)]">{s.blurb}</div>
-              <div className="mt-3 text-xs" style={{ color: s.ready ? s.color : "var(--muted)" }}>
-                {s.ready ? `${s.topics} topic${s.topics === 1 ? "" : "s"} · open →` : "Coming soon"}
+      {tiles.length > 0 && (
+        <section className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          {tiles.map((s) => (
+            <Link key={s.name} href={`/topics/${s.topics[0].id}`}>
+              <div className="glass group h-full cursor-pointer rounded-3xl p-5 transition hover:-translate-y-1 hover:border-[var(--brand)]">
+                <div
+                  className="mb-3 grid h-12 w-12 place-items-center rounded-2xl text-2xl"
+                  style={{ background: `${s.color}22` }}
+                >
+                  {s.icon}
+                </div>
+                <div className="font-semibold">{s.name}</div>
+                {/* The subject's own lesson titles, rather than a blurb written
+                    before anyone knew what would be uploaded. */}
+                <div className="mt-0.5 line-clamp-2 text-xs text-[var(--muted)]">
+                  {s.topics.map((t) => t.title).join(" · ")}
+                </div>
+                <div className="mt-3 text-xs" style={{ color: s.color }}>
+                  {s.topics.length} topic{s.topics.length === 1 ? "" : "s"} · open →
+                </div>
               </div>
-            </div>
-          );
-          return s.ready ? (
-            <Link key={s.id} href="/topics/moments">{card}</Link>
-          ) : (
-            <div key={s.id}>{card}</div>
-          );
-        })}
-      </section>
+            </Link>
+          ))}
+        </section>
+      )}
 
       {needsToJoin && (
         <section className="mt-10">

@@ -1,4 +1,4 @@
--- Verity AI — give practice attempts a real reference to their question
+-- Dhari AI — give practice attempts a real reference to their question
 --
 -- Apply AFTER 0001–0019.
 --

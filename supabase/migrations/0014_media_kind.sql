@@ -1,4 +1,4 @@
--- Verity AI — tell a figure apart from a whole slide
+-- Dhari AI — tell a figure apart from a whole slide
 --
 -- Apply AFTER 0001–0013.
 --
