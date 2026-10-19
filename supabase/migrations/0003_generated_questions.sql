@@ -1,4 +1,4 @@
--- Verity AI — AI-generated practice questions (Phase 1, task #24)
+-- Dhari AI — AI-generated practice questions (Phase 1, task #24)
 --
 -- Same caveat as prior migrations: not yet applied or tested against a real
 -- Postgres instance. Apply after 0001_init.sql and 0002_ingestion_storage.sql.

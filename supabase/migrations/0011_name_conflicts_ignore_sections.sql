@@ -1,4 +1,4 @@
--- Verity AI — a filename collides on its name alone
+-- Dhari AI — a filename collides on its name alone
 --
 -- Apply AFTER 0001–0010.
 --

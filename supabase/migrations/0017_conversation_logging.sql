@@ -1,4 +1,4 @@
--- Verity AI — make conversation logging possible, and disposable
+-- Dhari AI — make conversation logging possible, and disposable
 --
 -- Apply AFTER 0001–0016.
 --

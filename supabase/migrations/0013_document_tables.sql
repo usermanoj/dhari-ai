@@ -1,4 +1,4 @@
--- Verity AI — keep the data tables that came with the deck
+-- Dhari AI — keep the data tables that came with the deck
 --
 -- Apply AFTER 0001–0012.
 --

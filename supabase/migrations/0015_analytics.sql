@@ -1,4 +1,4 @@
--- Verity AI — real analytics for the teacher, HOD and principal dashboards
+-- Dhari AI — real analytics for the teacher, HOD and principal dashboards
 --
 -- Apply AFTER 0001–0014.
 --

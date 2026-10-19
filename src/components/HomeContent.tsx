@@ -57,7 +57,7 @@ export default function HomeContent({ locale, session }: { locale: AppLocale; se
         <div className="flex items-center gap-2">
           <span className="grid h-10 w-10 place-items-center rounded-2xl bg-[var(--brand)] text-xl glow-brand">🛡️</span>
           <span className="text-lg font-semibold tracking-tight">
-            Verity <span className="text-[var(--brand2)]">AI</span>
+            Dhari <span className="text-[var(--brand2)]">AI</span>
           </span>
         </div>
         <div className="flex items-center gap-3">

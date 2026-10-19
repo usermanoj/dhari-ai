@@ -1,6 +1,6 @@
 <div align="center">
 
-# Verity AI
+# Dhari AI
 
 ### One truth: your teacher's material, in every student's language.
 
@@ -12,7 +12,7 @@ Every answer comes only from a teacher's own approved material — never the ope
 [![Built with Next.js](https://img.shields.io/badge/Next.js-16-000000?style=for-the-badge&logo=next.js)](https://nextjs.org)
 [![Powered by Claude](https://img.shields.io/badge/Powered%20by-Claude-22D3EE?style=for-the-badge)](https://anthropic.com)
 
-**[Live Demo →](https://esltech.vercel.app)** &nbsp;·&nbsp; **[Pitch Deck →](./docs/Verity-AI-Pitch-Deck.pptx)** &nbsp;·&nbsp; **[Demo Script →](./DEMO.md)**
+**[Live Demo →](https://esltech.vercel.app)** &nbsp;·&nbsp; **[Pitch Deck →](./docs/Dhari-AI-Pitch-Deck.pptx)** &nbsp;·&nbsp; **[Demo Script →](./DEMO.md)**
 
 Built end-to-end for the **Claude Code Hackathon**
 
@@ -20,9 +20,9 @@ Built end-to-end for the **Claude Code Hackathon**
 
 ---
 
-## Why Verity AI
+## Why Dhari AI
 
-Generic AI tutors answer from the whole internet — unpredictable, uncited, and easy for a student to use to just cheat. **Verity AI does the opposite**: it is architecturally constrained to answer *only* from material a teacher has approved, cites the exact source every time, and is designed to guide a student toward an answer rather than hand one over.
+Generic AI tutors answer from the whole internet — unpredictable, uncited, and easy for a student to use to just cheat. **Dhari AI does the opposite**: it is architecturally constrained to answer *only* from material a teacher has approved, cites the exact source every time, and is designed to guide a student toward an answer rather than hand one over.
 
 | | |
 |---|---|

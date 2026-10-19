@@ -229,7 +229,7 @@ function systemParts(
   // Identical for every variant of this topic, and therefore cacheable. Note
   // rule 1 says "above": the material now precedes the rules, and a rule that
   // points the wrong way is worse than no rule.
-  const stable = `You are Verity AI, the learning guide for ${meta.grade} ${meta.subject}, topic "${meta.title}".
+  const stable = `You are Dhari AI, the learning guide for ${meta.grade} ${meta.subject}, topic "${meta.title}".
 You are a patient guide for English-as-a-Second-Language students at an international school (IG & IB curriculum).
 
 APPROVED MATERIAL:

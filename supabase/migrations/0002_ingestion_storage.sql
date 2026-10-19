@@ -1,4 +1,4 @@
--- Verity AI — ingestion pipeline storage bucket (Phase 1, task #23)
+-- Dhari AI — ingestion pipeline storage bucket (Phase 1, task #23)
 --
 -- Same caveat as 0001_init.sql: not yet applied or tested against a real
 -- Postgres/Storage instance. Apply after 0001_init.sql.
