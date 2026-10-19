@@ -5,9 +5,9 @@ import "./globals.css";
 const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Dhari AI — Curriculum AI for ESL Classrooms",
+  title: "Lectern — Curriculum AI for ESL Classrooms",
   description:
-    "Dhari AI answers only from your school's approved material — never the open internet, cited every time — and speaks a student's own language, starting with Chinese (Mandarin, Simplified). Built for ESL students at international schools.",
+    "Lectern answers only from your school's approved material — never the open internet, cited every time — and speaks a student's own language, starting with Chinese (Mandarin, Simplified). Built for ESL students at international schools.",
 };
 
 // Deliberately synchronous and request-free.

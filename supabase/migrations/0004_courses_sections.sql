@@ -1,4 +1,4 @@
--- Dhari AI — courses/sections model + corpus sharing + dashboard scoping
+-- Lectern — courses/sections model + corpus sharing + dashboard scoping
 -- (Phase 2 hardening, before the first live-test with real teachers)
 --
 -- Apply AFTER 0001–0003. Unlike those, this migration ALTERs tables that

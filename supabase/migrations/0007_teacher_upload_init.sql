@@ -1,4 +1,4 @@
--- Dhari AI — single-call upload authorisation (Phase 2 perf)
+-- Lectern — single-call upload authorisation (Phase 2 perf)
 --
 -- Apply AFTER 0001–0006.
 --

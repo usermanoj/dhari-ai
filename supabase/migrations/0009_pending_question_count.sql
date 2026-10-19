@@ -1,4 +1,4 @@
--- Dhari AI — surface questions waiting for teacher approval
+-- Lectern — surface questions waiting for teacher approval
 --
 -- Apply AFTER 0001–0008.
 --

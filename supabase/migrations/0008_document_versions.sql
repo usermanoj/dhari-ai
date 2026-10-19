@@ -1,4 +1,4 @@
--- Dhari AI — document versions and duplicate-name resolution
+-- Lectern — document versions and duplicate-name resolution
 --
 -- Apply AFTER 0001–0007.
 --

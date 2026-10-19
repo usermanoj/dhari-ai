@@ -1,8 +1,8 @@
-# Dhari AI — Roadmap & Architecture Spec
+# Lectern — Roadmap & Architecture Spec
 
 **Status:** Post-hackathon review. Captures the honest state of the hackathon build, the target architecture for a multi-school product, and the phased plan to get there.
 
-**Audience:** engineering (this repo's next contributors), and anyone evaluating what it takes to move Dhari AI from hackathon demo to a product international schools can actually buy and run.
+**Audience:** engineering (this repo's next contributors), and anyone evaluating what it takes to move Lectern from hackathon demo to a product international schools can actually buy and run.
 
 ---
 

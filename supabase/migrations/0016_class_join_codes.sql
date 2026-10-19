@@ -1,4 +1,4 @@
--- Dhari AI — class join codes
+-- Lectern — class join codes
 --
 -- Apply AFTER 0001–0015.
 --

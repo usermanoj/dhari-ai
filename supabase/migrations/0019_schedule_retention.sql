@@ -1,4 +1,4 @@
--- Dhari AI — actually enforce the retention policy
+-- Lectern — actually enforce the retention policy
 --
 -- Apply AFTER 0001–0018.
 --

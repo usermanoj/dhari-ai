@@ -1,4 +1,4 @@
--- Dhari AI — keep the diagrams that came with the deck
+-- Lectern — keep the diagrams that came with the deck
 --
 -- Apply AFTER 0001–0009.
 --

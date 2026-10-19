@@ -1,4 +1,4 @@
--- Dhari AI — single-call state for the teacher ingest screen (Phase 2 perf)
+-- Lectern — single-call state for the teacher ingest screen (Phase 2 perf)
 --
 -- Apply AFTER 0001–0005.
 --
