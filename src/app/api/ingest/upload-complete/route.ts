@@ -6,6 +6,8 @@ import { supabaseAdmin } from "@/lib/supabase/admin";
 import { extractAndSaveChunks } from "@/lib/ingestion/process";
 import { ingestDocumentWorkflow } from "@/workflows/ingest-document";
 import { atLeast } from "@/lib/roles";
+import { reportError } from "@/lib/errors/report";
+import { explainIngestFailure, technicalDetail } from "@/lib/ingestion/failure";
 
 export const runtime = "nodejs";
 
@@ -155,6 +157,12 @@ export async function POST(req: NextRequest) {
       // the diagnostics line the ingest page already shows.
       console.error("ingest failed", { documentId, error: err });
 
+      // And to the health page, which is where someone who can actually fix a
+      // billing problem would look. A console line on a serverless function
+      // reaches nobody: until now the only person who ever saw an upload fail
+      // was the teacher it failed for, reading a sentence about their file.
+      await reportError("ingest", err, "a deck could not be processed on upload");
+
       return NextResponse.json(
         { error: explainIngestFailure(err), detail: technicalDetail(err) },
         { status: 500 },
@@ -168,32 +176,4 @@ export async function POST(req: NextRequest) {
   await start(ingestDocumentWorkflow, [documentId, storagePath]);
 
   return NextResponse.json({ documentId, status: "processing" });
-}
-
-// Turns a provider error into something a teacher can act on.
-//
-// The raw text is written for whoever integrated the API, not for the person
-// holding the deck: "This model does not support response format
-// `json_schema`. See supported models at console.groq.com/..." told a physics
-// teacher nothing except that the software was broken.
-function explainIngestFailure(err: unknown): string {
-  const message = err instanceof Error ? err.message : String(err ?? "");
-
-  if (/rate[- ]?limit|too many requests|quota/i.test(message)) {
-    return "The AI service is busy right now. Nothing was saved — please try this upload again in a minute.";
-  }
-  if (/json_schema|response format|structured output/i.test(message)) {
-    return "The AI service returned an unusable response. Nothing was saved — please try again.";
-  }
-  return "Couldn't read this file. Nothing was saved — please check it opens normally and try again.";
-}
-
-// A compact, safe version of the underlying error for the diagnostics line.
-//
-// Truncated because provider errors can carry long payload echoes, and
-// bounded so nothing unexpected ends up rendered at length in a teacher's
-// browser.
-function technicalDetail(err: unknown): string {
-  const message = err instanceof Error ? err.message : String(err ?? "");
-  return message.replace(/\s+/g, " ").trim().slice(0, 300);
 }
