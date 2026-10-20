@@ -5,6 +5,13 @@ import { AnimatePresence, motion } from "framer-motion";
 import { CHECKABLE_CHUNK_IDS } from "@/lib/tutor";
 import RichText from "./RichText";
 import { speakSequence, type Segment, type Sequence } from "./speech-sequence";
+import {
+  CHINESE_KEY,
+  LEVEL_KEY,
+  RETIRED_CHINESE_KEY,
+  RETIRED_LEVEL_KEY,
+  carriedOver,
+} from "@/lib/tutor/preferences";
 
 type Intent = "explain" | "translate" | "example" | "askme" | "check";
 type EslLevel = "advanced" | "intermediate" | "beginner";
@@ -57,8 +64,6 @@ const LEVELS: { id: EslLevel; label: string }[] = [
 // so an effect that set state after mount would both trip the "no setState in
 // an effect" rule and render one frame of the wrong value; this hook exists
 // for exactly this shape — a value the server cannot see.
-const LEVEL_KEY = "verity.eslLevel";
-const CHINESE_KEY = "verity.chinese";
 const DEFAULT_LEVEL: EslLevel = "intermediate";
 
 function isLevel(value: string | null): value is EslLevel {
@@ -84,7 +89,7 @@ function seedFromServer(level: EslLevel | undefined, chinese: boolean | undefine
 function load() {
   if (cachedLevel !== null && cachedChinese !== null) return;
   try {
-    const stored = window.localStorage.getItem(LEVEL_KEY);
+    const stored = carriedOver(window.localStorage, LEVEL_KEY, RETIRED_LEVEL_KEY);
     // A browser that stored the old combined value answers BOTH questions:
     // "beginner_zh" meant easiest English and Chinese glosses. Migrating it
     // rather than discarding it means a student who had set their preference
@@ -97,7 +102,7 @@ function load() {
       return;
     }
     cachedLevel = isLevel(stored) ? stored : DEFAULT_LEVEL;
-    cachedChinese = window.localStorage.getItem(CHINESE_KEY) === "1";
+    cachedChinese = carriedOver(window.localStorage, CHINESE_KEY, RETIRED_CHINESE_KEY) === "1";
   } catch {
     // Private browsing, or storage disabled. The defaults are fine.
     cachedLevel = DEFAULT_LEVEL;
