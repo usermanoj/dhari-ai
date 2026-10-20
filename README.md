@@ -7,12 +7,12 @@
 **A closed-corpus AI learning platform for students learning in English as a Second Language (ESL) at IB & Cambridge international schools.**
 Every answer comes only from a teacher's own approved material — never the open internet — cited every time, and translated into a student's own language.
 
-[![Live Demo](https://img.shields.io/badge/demo-live-34D399?style=for-the-badge)](https://esltech.vercel.app)
+[![Live Demo](https://img.shields.io/badge/demo-live-34D399?style=for-the-badge)](https://lectern-ai.vercel.app)
 [![License: MIT](https://img.shields.io/badge/license-MIT-6366F1?style=for-the-badge)](./LICENSE)
 [![Built with Next.js](https://img.shields.io/badge/Next.js-16-000000?style=for-the-badge&logo=next.js)](https://nextjs.org)
 [![Powered by Claude](https://img.shields.io/badge/Powered%20by-Claude-22D3EE?style=for-the-badge)](https://anthropic.com)
 
-**[Live Demo →](https://esltech.vercel.app)** &nbsp;·&nbsp; **[Pitch Deck →](./docs/Lectern-Pitch-Deck.pptx)** &nbsp;·&nbsp; **[Demo Script →](./DEMO.md)**
+**[Live Demo →](https://lectern-ai.vercel.app)** &nbsp;·&nbsp; **[Pitch Deck →](./docs/Lectern-Pitch-Deck.pptx)** &nbsp;·&nbsp; **[Demo Script →](./DEMO.md)**
 
 Built end-to-end for the **Claude Code Hackathon**
 
